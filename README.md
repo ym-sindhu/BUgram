@@ -34,7 +34,6 @@ Make sure you have the following installed:
    npm install
    ```
 ### **Running the Project**
-
    Depending on how your project is set up, you can use one of the following commands:
    • To start the development server:
    ```bash
@@ -48,7 +47,7 @@ Make sure you have the following installed:
    ```bash
    npm start
    ```
-## **Environment Variables**
+### **Environment Variables**
 The project requires environment variables, create a .env file in the root directory and add the required keys. An example .env file might look like this:
 
 ```env
@@ -56,7 +55,6 @@ DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=example
 PORT=5500
-Provide an example .env.example file in your repository for reference.
 ```
 
 ## **Common Issues**
@@ -71,4 +69,4 @@ Error: MODULE_NOT_FOUND
 ```
 Solution: Ensure you ran npm install before starting the project.
 
-### **License**
+## **License**
