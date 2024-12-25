@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    min-height: 100vh;
+    background: url('kk.jpeg') center/cover;
+    background-position: fixed;
+    background-attachment: fixed;
+    height: auto;
+    width: 100%;
+    transition: background 0.5s, color 0.5s;
+}
+
+
+
+
+
+/* Header */
+.main-header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.dropdown {
+    
+        position: relative;
+        display: inline-block;
+
+}
+
+.dropdown-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    /* Remove absolute positioning */
+    position: relative; 
+    transform: none; /* Remove transform */
+    box-shadow:1px 4px 10px black    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Align dropdown items to the right */
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    min-width: 150px;
+    border-radius: 12px;
+    overflow: hidden;}
+
+
+.dropdown-content button {
+    background: none;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px ;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-content button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-btn:hover {
+    background-color: #0056b3;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+/* Main Content */
+.container {
+    background: white;
+    width: 80%;
+    max-width: 1100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+    margin-left: -27%;
+    padding: 20px;
+}
+
+/* Profile Header */
+.header-section {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px black;
+    position: relative;
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    position: absolute;
+    margin-left: -48%;
+    bottom: -50px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+/* Profile Content */
+.profile-content {
+    display: flex;
+    margin-top: 70px;
+    /* Adjust for profile picture overlap */
+}
+
+/* Left Panel */
+.left-panel {
+    flex: 1;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.left-panel h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.left-panel p {
+    margin: 8px 0;
+}
+
+/* Right Panel */
+
+
+.post {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Profile Menu */
+.profile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute; /* Ensure it has a positioning context */
+    z-index: 1; /* Set a higher z-index value */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: Add background for better visibility */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Update Form */
+.update-form {
+    display: none;
+    margin-top: 20px;
+}
+
+.update-form input,
+.update-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.update-form button{
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update-form button:hover {
+    background-color: #0056b3;
+}
+.side_small{
+    background: white;
+    height: 150px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.326);
+    margin-top: -17%;
+    margin-left: 57%;
+    padding: 20px;
+    position: relative; /* To keep the profile-picture2 within bounds */
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.profile-picture2 {
+    position: relative; /* Change to relative to avoid overlapping issues */
+    margin: 0 auto; /* Center it within the parent */
+    bottom: 0; /* Remove overlapping with bottom */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex; /* Flex for alignment */
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture img, .profile-picture2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.posts-section {
+    margin-top:  17%;
+    margin-left : -27%;
+    max-width: 1100px;
+    max-height: none;
+    height: 30%;
+    width: 80%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+   
+}
+
+.posts-grid img {
+    width: auto;
+    height: 150px;
+    object-fit:scale-down;
+    border-radius: 5px;
+}
+.posts-grid img:hover {
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+#upload1 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#upload1:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+::-webkit-file-upload-button
+{
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+::-webkit-file-upload-button:hover
+{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+/* Lightbox Overlay */
+.lightbox-overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.7s, visibility 0.7s;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content img {
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition : 0.7s;
+    margin-left: 15%;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 1s;
+}
+
+.lightbox-close:hover {
+    color: #f00;
+}   
+
+
+
+
+.dark-mode-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: background-color 0.7s, color 0.7s;
+}
+body.dark-mode {
+    color: #e4e4e4;
+    background-color: rgb(0, 0, 0) ;
+    background-image: url(https://e0.pxfuel.com/wallpapers/155/210/desktop-wallpaper-bg-graphic-dark-graphic.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.dark-mode .posts-section{
+    background: #353535;
+    box-shadow: 0 4px 8px rgba(201, 201, 201, 0.1);
+}
+body.dark-mode .container {
+    background: #353535;
+    box-shadow: 0 4px 8px rgba(201, 201, 201, 0.1);
+    }
+
+body.dark-mode .header-section {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px black;
+    position: relative;
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dark-mode .main-header{
+    background-image: linear-gradient(#242424, #484848);
+}
+body.dark-mode .side_small{
+    background: #353535;
+    box-shadow: 0 4px 8px rgba(201, 201, 201, 0.1);
+}
+body.dark-mode .dropdown-btn{
+    background-image: linear-gradient( blue , black);
+ }
+
+@media (min-width: 2560px) {
+    body {
+        font-size: 20px;
+    }
+    .container {
+        width: 80%;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1920px) and (max-width: 2559px) {
+    body {
+        font-size: 18px;
+    }
+    .container {
+        width: 80%;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 1280px) and (max-width: 1800px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        width: 60%;
+    }
+    .side_small {
+        width: auto;
+    }
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+    .posts-section{
+        width :60%;
+        margin-top: 15%;
+    }
+}
+
+
+/* Mobile Devices */
+@media (min-width: 200px) and (max-width: 1279px) {
+    body {
+        font-size: 13px;
+    }
+    
+    .container {
+        width: 95%;
+        margin-left: 1%;
+        margin-top: 8%;
+       
+    }
+    .main-header {
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        color: #ffffff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .side_small{
+        display: none;
+
+    }
+    .posts-section
+    { 
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+    }
+    .posts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        
+    }
+    .posts-section{
+        width :95%
+    }}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BU-gram Chat</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="website icon" type="png" href="icon.png">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">Bugram</div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn">☰</button>
+            <div class="dropdown-content">
+                <button class="header-btn" onclick="window.location.href = 'http://localhost:5500/feed/feed.html'">HOME</button> 
+                <button class="header-btn"  onclick="window.location.href = 'http://localhost:5500/profile/profile.html'" >   Profile  </button>
+                <button class="header-btn"  onclick="window.location.href = 'http://localhost:5500/post/post.html'" >   Create Post    </button>
+                <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
+                
+            </div>
+        </div>
+
+    </header>
+    <div class="container" >
+        <!-- Chat Header -->    
+        <div class="chat-header">
+            BU-gram Chat Room
+        </div>
+
+        <!-- Chat Display -->
+        <ul class="chat-messages" id="messages" >   
+            
+            <!-- Chat messages will appear here -->
+        </ul>
+
+        <!-- Chat Input -->
+        <form class="chat-input" id="form" action="">
+            <input id="input" autocomplete="off" placeholder="Type your message...">
+            <button>Send</button>
+        </form>
+    </div>
+    <!-- Socket.IO Client -->
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="chat.js"></script>
+
+</body>
+</html>
+    

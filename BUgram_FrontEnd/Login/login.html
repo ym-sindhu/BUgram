@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BU Gram Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="website icon" type="png" href="icon.png">
+</head>
+
+<body>
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
+    <div class="container">
+
+        <div class="left-side">
+            <div class="login-box">
+                <img src="bu logo.png" alt="BU Gram Logo" class="logo">
+                <h1 class="app-name">BU GRAM</h1>
+                <form id="login-form">
+                    <!-- Email -->
+                    <label for="username" class="input-label">Email</label>
+                    <input type="email" id="email" placeholder="Enter your Email" class="input-field">
+
+                    <!-- Password -->
+                    <label for="password" class="input-label">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" class="input-field">
+                   
+
+                    <!-- Login Button -->
+                    <button type="submit" class="login-btn">LOGIN</button>
+
+                    <!-- Divider -->
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+
+                <!--Microsoft Login
+                    <button type="button" class="microsoft-btn" onclick="loginWithMicrosoft()">
+                    <img src="msc.png" alt="Microsoft Logo">
+                    Login with Microsoft
+                </button>
+                    <button type="button" class="ggl-btn" onclick="loginWithGoogle()">
+                    <img src="ggl.png" alt="Google Logo">
+                    Login with Google 
+                </button> -->
+
+                    <!-- Signup Link -->
+                    <p class="signup-text">Don't have an account?<a href="http://localhost:5500/Signup/Signup.html">Signup</a></p>
+                </form>
+            </div>
+            <div class="right"><img src="bu logo.png" class="doodle">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
